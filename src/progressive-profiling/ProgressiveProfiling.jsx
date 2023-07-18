@@ -213,7 +213,7 @@ const ProgressiveProfiling = (props) => {
       {props.shouldRedirect ? (
         <RedirectLogistration
           success
-          redirectUrl={registrationResult.redirectUrl}
+          redirectUrl={queryParams?.next ? queryParams.next : registrationResult.redirectUrl}
           redirectToRecommendationsPage={showRecommendationsPage}
           educationLevel={values?.level_of_education}
           userId={authenticatedUser?.userId}
