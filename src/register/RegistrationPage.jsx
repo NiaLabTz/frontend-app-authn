@@ -746,7 +746,7 @@ class RegistrationPage extends React.Component {
           finishAuthUrl={finishAuthUrl}
           optionalFields={this.props.optionalFields}
           redirectToWelcomePage={getConfig().ENABLE_PROGRESSIVE_PROFILING
-                 && Object.keys(this.props.optionalFields).length !== 0}
+            && Object.keys(this.props.optionalFields).length !== 0}
         />
         <div className="mw-xs mt-3">
           {this.state.errorCode ? (
@@ -822,38 +822,49 @@ class RegistrationPage extends React.Component {
               />
             )}
             {!(this.showDynamicRegistrationFields)
-            && (
-              <CountryDropdown
-                name="country"
-                floatingLabel={intl.formatMessage(messages['registration.country.label'])}
-                options={this.countryList}
-                value={this.state.country}
-                autoComplete="on"
-                handleBlur={this.handleOnBlur}
-                handleFocus={this.handleOnFocus}
-                errorMessage={this.state.errors.country}
-                errorCode={this.state.errorCode}
-              />
-            )}
+              && (
+                <CountryDropdown
+                  name="country"
+                  floatingLabel={intl.formatMessage(messages['registration.country.label'])}
+                  options={this.countryList}
+                  value={this.state.country}
+                  autoComplete="on"
+                  handleBlur={this.handleOnBlur}
+                  handleFocus={this.handleOnFocus}
+                  errorMessage={this.state.errors.country}
+                  errorCode={this.state.errorCode}
+                />
+              )}
             {formFields}
             {(getConfig().MARKETING_EMAILS_OPT_IN)
-            && (
-              <Form.Checkbox
-                className="opt-checkbox"
-                name="marketing_emails_opt_in"
-                checked={this.state.marketingOptIn}
-                onChange={(e) => this.props.setRegistrationFormData({
-                  marketingOptIn: e.target.checked,
-                })}
-              >
-                {intl.formatMessage(messages['registration.opt.in.label'], { siteName: getConfig().SITE_NAME })}
-              </Form.Checkbox>
-            )}
+              && (
+                <Form.Checkbox
+                  className="opt-checkbox"
+                  name="marketing_emails_opt_in"
+                  checked={this.state.marketingOptIn}
+                  onChange={(e) => this.props.setRegistrationFormData({
+                    marketingOptIn: e.target.checked,
+                  })}
+                >
+                  {intl.formatMessage(messages['registration.opt.in.label'], { siteName: getConfig().SITE_NAME })}
+                </Form.Checkbox>
+              )}
             {!(this.showDynamicRegistrationFields) ? (
               <HonorCode
                 fieldType="tos_and_honor_code"
               />
             ) : <div>{honorCode}</div>}
+
+            <div 
+              className="alert alert-primary d-flex align-items-center mt-4" 
+              style={{ 
+                fontSize: "1rem"
+               }}
+              role="alert"
+             >
+              🔒 Action Required: Check your inbox (or spam folder) for our account verification email and verify your account to continue enjoying our services. Thank you!
+            </div>
+
             <StatefulButton
               name="register-user"
               id="register-user"
