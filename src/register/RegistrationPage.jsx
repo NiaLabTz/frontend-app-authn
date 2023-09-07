@@ -862,10 +862,10 @@ class RegistrationPage extends React.Component {
               }}
               role="alert"
             >
-              <ul class="gap-3">
+              <ol class="gap-3">
                 <li>Kwa kujisajili nasi, moja kwa moja umekubaliana na Masharti yetu ya kutoa huduma.</li>
                 <li>Tafadhali ingia kwenye ‘email’ yako ili kukamilisha usajili huu. (Angalia na ‘Spam folder’)</li>
-              </ul>
+              </ol>
             </div>
 
             <StatefulButton
