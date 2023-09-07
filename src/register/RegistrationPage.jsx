@@ -855,14 +855,17 @@ class RegistrationPage extends React.Component {
               />
             ) : <div>{honorCode}</div>}
 
-            <div 
-              className="alert alert-primary d-flex align-items-center mt-4" 
-              style={{ 
+            <div
+              className="alert alert-primary d-flex align-items-center mt-4"
+              style={{
                 fontSize: "1rem"
-               }}
+              }}
               role="alert"
-             >
-              🔒 Action Required: Check your inbox (or spam folder) for our account verification email after you've pressed the button below and verify your account to continue enjoying our services. Thank you!
+            >
+              <ul class="gap-3">
+                <li>Kwa kujisajili nasi, moja kwa moja umekubaliana na Masharti yetu ya kutoa huduma.</li>
+                <li>Tafadhali ingia kwenye ‘email’ yako ili kukamilisha usajili huu. (Angalia na ‘Spam folder’)</li>
+              </ul>
             </div>
 
             <StatefulButton
