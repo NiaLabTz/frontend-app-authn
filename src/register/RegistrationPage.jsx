@@ -862,7 +862,7 @@ class RegistrationPage extends React.Component {
                }}
               role="alert"
              >
-              🔒 Action Required: Check your inbox (or spam folder) for our account verification email and verify your account to continue enjoying our services. Thank you!
+              🔒 Action Required: Check your inbox (or spam folder) for our account verification email after you've pressed the button below and verify your account to continue enjoying our services. Thank you!
             </div>
 
             <StatefulButton
