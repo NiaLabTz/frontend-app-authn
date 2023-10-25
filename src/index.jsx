@@ -38,7 +38,7 @@ initialize({
         COOKIE_DOMAIN: process.env.COOKIE_DOMAIN,
         WELCOME_PAGE_SUPPORT_LINK: process.env.WELCOME_PAGE_SUPPORT_LINK || null,
         DISABLE_ENTERPRISE_LOGIN: process.env.DISABLE_ENTERPRISE_LOGIN || '',
-        INFO_EMAIL: process.env.INFO_EMAIL || '',
+        INFO_EMAIL: process.env.INFO_EMAIL || 'contact@nia.tz',
         REGISTER_CONVERSION_COOKIE_NAME: process.env.REGISTER_CONVERSION_COOKIE_NAME || null,
         ENABLE_PROGRESSIVE_PROFILING: process.env.ENABLE_PROGRESSIVE_PROFILING || false,
         MARKETING_EMAILS_OPT_IN: process.env.MARKETING_EMAILS_OPT_IN || '',
