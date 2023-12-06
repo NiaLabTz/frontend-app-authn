@@ -15,7 +15,7 @@ class CountryDropdown extends React.Component {
     this.handleOnBlur = this.handleOnBlur.bind(this);
 
     this.state = {
-      displayValue: '',
+      displayValue: 'Tanzania, United Republic of',
       icon: this.expandMoreButton(),
       errorMessage: '',
       showFieldError: true,

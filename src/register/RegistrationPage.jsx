@@ -673,8 +673,6 @@ class RegistrationPage extends React.Component {
     const formFields = this.showDynamicRegistrationFields ? (
       Object.keys(this.props.fieldDescriptions).map((fieldName) => {
         const fieldData = this.props.fieldDescriptions[fieldName];
-        console.log('Field data', fieldData.name);
-        console.log('State with field data', this.state.values[fieldData.name])
         switch (fieldData.name) {
           case FIELDS.COUNTRY:
             return (
