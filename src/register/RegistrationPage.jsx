@@ -525,10 +525,8 @@ class RegistrationPage extends React.Component {
         value = value.trim(); // eslint-disable-line no-param-reassign
         if (value) {
           const normalizedValue = value.toLowerCase();
-          console.log('normalized value', normalizedValue);
           let selectedCountry = (
             this.countryList.find((o) => o[COUNTRY_DISPLAY_KEY].toLowerCase().trim() === normalizedValue));
-          console.log('Selected Country', selectedCountry);
           if (selectedCountry) {
             value = selectedCountry[COUNTRY_CODE_KEY]; // eslint-disable-line no-param-reassign
             errors.country = '';
@@ -675,6 +673,8 @@ class RegistrationPage extends React.Component {
     const formFields = this.showDynamicRegistrationFields ? (
       Object.keys(this.props.fieldDescriptions).map((fieldName) => {
         const fieldData = this.props.fieldDescriptions[fieldName];
+        console.log('Field data', fieldData.name);
+        console.log('State with field data', this.state.values[fieldData.name])
         switch (fieldData.name) {
           case FIELDS.COUNTRY:
             return (
