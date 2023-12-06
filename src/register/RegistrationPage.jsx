@@ -71,7 +71,7 @@ class RegistrationPage extends React.Component {
     this.tpaHint = getTpaHint();
     const { registrationFormData } = this.props;
     this.state = {
-      country: '',
+      country: 'TZ',
       email: registrationFormData.email,
       name: registrationFormData.name,
       password: registrationFormData.password,
