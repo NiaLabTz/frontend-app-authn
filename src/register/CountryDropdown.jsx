@@ -194,7 +194,7 @@ class CountryDropdown extends React.Component {
           handleChange={this.handleOnChange}
           handleBlur={this.handleOnBlur}
           handleFocus={this.handleFocus}
-          value={'Tanzania, United Republic of'}
+          value={'Tanzania'}
           errorMessage={this.state.errorMessage}
         />
         <div className="dropdown-container">
