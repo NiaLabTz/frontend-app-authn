@@ -71,7 +71,7 @@ class RegistrationPage extends React.Component {
     this.tpaHint = getTpaHint();
     const { registrationFormData } = this.props;
     this.state = {
-      country: 'United Republic of Tanzania',
+      country: '',
       email: registrationFormData.email,
       name: registrationFormData.name,
       password: registrationFormData.password,
@@ -525,8 +525,10 @@ class RegistrationPage extends React.Component {
         value = value.trim(); // eslint-disable-line no-param-reassign
         if (value) {
           const normalizedValue = value.toLowerCase();
+          console.log('normalized value', normalizedValue);
           let selectedCountry = (
             this.countryList.find((o) => o[COUNTRY_DISPLAY_KEY].toLowerCase().trim() === normalizedValue));
+          console.log('Selected Country', selectedCountry);
           if (selectedCountry) {
             value = selectedCountry[COUNTRY_CODE_KEY]; // eslint-disable-line no-param-reassign
             errors.country = '';
