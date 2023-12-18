@@ -23,12 +23,12 @@ const HonorCode = (props) => {
           values={{
             platformName: getConfig().SITE_NAME,
             tosAndHonorCode: (
-              <Hyperlink variant="muted" destination={getConfig().TOS_AND_HONOR_CODE || '#'} target="_blank">
+              <Hyperlink variant="muted" destination={getConfig().TOS_AND_HONOR_CODE || 'https://nia.tz/tos'} target="_blank">
                 {intl.formatMessage(messages['terms.of.service.and.honor.code'])}
               </Hyperlink>
             ),
             privacyPolicy: (
-              <Hyperlink variant="muted" destination={getConfig().PRIVACY_POLICY || '#'} target="_blank">
+              <Hyperlink variant="muted" destination={getConfig().PRIVACY_POLICY || 'https://nia.tz/privacy'} target="_blank">
                 {intl.formatMessage(messages['privacy.policy'])}
               </Hyperlink>
             ),
