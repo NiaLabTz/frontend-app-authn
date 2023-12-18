@@ -31,7 +31,7 @@ initialize({
         LOGIN_ISSUE_SUPPORT_LINK: process.env.LOGIN_ISSUE_SUPPORT_LINK || null,
         ACTIVATION_EMAIL_SUPPORT_LINK: process.env.ACTIVATION_EMAIL_SUPPORT_LINK || null,
         PASSWORD_RESET_SUPPORT_LINK: process.env.PASSWORD_RESET_SUPPORT_LINK || null,
-        TOS_AND_HONOR_CODE: process.env.TOS_AND_HONOR_CODE || null,
+        TOS_AND_HONOR_CODE: process.env.TOS_AND_HONOR_CODE || "https://nia.tz/tos",
         TOS_LINK: process.env.TOS_LINK || null,
         PRIVACY_POLICY: process.env.PRIVACY_POLICY || null,
         USER_SURVEY_COOKIE_NAME: process.env.USER_SURVEY_COOKIE_NAME || null,
